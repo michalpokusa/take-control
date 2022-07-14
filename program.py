@@ -85,6 +85,18 @@ class TakeControl:
             text_to_type = input("Text to type: ")
             pyautogui.write(text_to_type)
 
+        def press():
+            key_to_press = input("Key to press: ")
+            pyautogui.press(key_to_press)
+
+        def press_down():
+            key_to_press = input("Key to press down: ")
+            pyautogui.keyDown(key_to_press)
+
+        def press_up():
+            key_to_press = input("Key to press up: ")
+            pyautogui.keyUp(key_to_press)
+
     def take_control():
         while True:
             key = readchar.readkey()
@@ -121,6 +133,13 @@ class TakeControl:
 
             # Typing
             if key == 't': TakeControl.Keyboard.type()
+
+            # Pressing keyboard keys
+            if key == 'P': TakeControl.Keyboard.press()
+            if key == 'p':
+                second_sequence_key = readchar.readchar()
+                if second_sequence_key == 'd': TakeControl.Keyboard.press_down()
+                if second_sequence_key == 'u': TakeControl.Keyboard.press_up()
 
             # Quiting
             if key == 'q': break
