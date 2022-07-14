@@ -4,6 +4,10 @@ os.environ["DISPLAY"] = ":0"
 import readchar
 import pyautogui
 
+class Utils:
+    def clear_terminal():
+        os.system('cls' if os.name == 'nt' else 'clear')
+
 class TakeControl:
 
     class Config:
@@ -103,7 +107,9 @@ class TakeControl:
 
     def take_control():
         while "In control":
+            Utils.clear_terminal()
             print("You are in control...")
+
             key = readchar.readkey()
 
             # Slow cursor moving
