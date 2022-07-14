@@ -102,7 +102,8 @@ class TakeControl:
             pyautogui.keyUp(key_to_press)
 
     def take_control():
-        while True:
+        while "In control":
+            print("You are in control...")
             key = readchar.readkey()
 
             # Slow cursor moving
@@ -149,6 +150,8 @@ class TakeControl:
                 if second_sequence_key == 'u': TakeControl.Keyboard.press_up(); continue
 
             # Quiting
-            if key == 'q': break
+            if key == 'q':
+                print("You lost control...")
+                break
 
 TakeControl.take_control()
