@@ -13,38 +13,105 @@ class TakeControl:
         SMALL_SCROLL_MOVEMENT = 5
         BIG_SCROLL_MOVEMENT = 25
 
+    class Mouse:
+
+        # Mouse movement
+        def slow_move_up():
+            pyautogui.move(0, -TakeControl.Config.SMALL_MOUSE_MOVEMENT)
+
+        def slow_move_down():
+            pyautogui.move(0, TakeControl.Config.SMALL_MOUSE_MOVEMENT)
+
+        def slow_move_left():
+            pyautogui.move(-TakeControl.Config.SMALL_MOUSE_MOVEMENT, 0)
+
+        def slow_move_right():
+            pyautogui.move(TakeControl.Config.SMALL_MOUSE_MOVEMENT, 0)
+
+        def fast_move_up():
+            pyautogui.move(0, -TakeControl.Config.BIG_MOUSE_MOVEMENT)
+
+        def fast_move_down():
+            pyautogui.move(0, TakeControl.Config.BIG_MOUSE_MOVEMENT)
+
+        def fast_move_left():
+            pyautogui.move(-TakeControl.Config.BIG_MOUSE_MOVEMENT, 0)
+
+        def fast_move_right():
+            pyautogui.move(TakeControl.Config.BIG_MOUSE_MOVEMENT, 0)
+
+        # Mouse clicks
+        def left_click():
+            pyautogui.click()
+
+        def left_double_click():
+            pyautogui.doubleClick(button="left")
+
+        def right_click():
+            pyautogui.rightClick()
+
+        def right_double_click():
+            pyautogui.doubleClick(button="right")
+
+        # Mouse pressing
+        def left_down():
+            pyautogui.mouseDown(button="left")
+
+        def left_up():
+            pyautogui.mouseUp(button="left")
+
+        def right_down():
+            pyautogui.mouseDown(button="right")
+
+        def right_up():
+            pyautogui.mouseUp(button="right")
+
+        # Scrolling
+        def slow_scroll_up():
+            pyautogui.scroll(TakeControl.Config.SMALL_SCROLL_MOVEMENT)
+
+        def fast_scroll_up():
+            pyautogui.scroll(TakeControl.Config.BIG_SCROLL_MOVEMENT)
+
+        def slow_scroll_down():
+            pyautogui.scroll(-TakeControl.Config.SMALL_SCROLL_MOVEMENT)
+
+        def fast_scroll_down():
+            pyautogui.scroll(-TakeControl.Config.BIG_SCROLL_MOVEMENT)
+
     def take_control():
         while True:
             key = readchar.readkey()
 
             # Slow cursor moving
-            if key == 'w': pyautogui.move(0, -TakeControl.Config.SMALL_MOUSE_MOVEMENT)
-            if key == 'a': pyautogui.move(-TakeControl.Config.SMALL_MOUSE_MOVEMENT, 0)
-            if key == 's': pyautogui.move(0, TakeControl.Config.SMALL_MOUSE_MOVEMENT)
-            if key == 'd': pyautogui.move(TakeControl.Config.SMALL_MOUSE_MOVEMENT, 0)
+            if key == 'w': TakeControl.Mouse.slow_move_up()
+            if key == 'a': TakeControl.Mouse.slow_move_left()
+            if key == 's': TakeControl.Mouse.slow_move_down()
+            if key == 'd': TakeControl.Mouse.slow_move_right()
 
             # Fast cursor moving
-            if key == 'W': pyautogui.move(0, -TakeControl.Config.BIG_MOUSE_MOVEMENT)
-            if key == 'A': pyautogui.move(-TakeControl.Config.BIG_MOUSE_MOVEMENT, 0)
-            if key == 'S': pyautogui.move(0, TakeControl.Config.BIG_MOUSE_MOVEMENT)
-            if key == 'D': pyautogui.move(TakeControl.Config.BIG_MOUSE_MOVEMENT, 0)
+            if key == 'W': TakeControl.Mouse.fast_move_up()
+            if key == 'A': TakeControl.Mouse.fast_move_left()
+            if key == 'S': TakeControl.Mouse.fast_move_down()
+            if key == 'D': TakeControl.Mouse.fast_move_right()
 
-            # Clicking
-            if key == 'j': pyautogui.click()
-            if key == 'l': pyautogui.rightClick()
-            if key == 'u': pyautogui.doubleClick()
+            # Clicking mouse buttons
+            if key == 'j': TakeControl.Mouse.left_click()
+            if key == 'J': TakeControl.Mouse.left_double_click()
+            if key == 'l': TakeControl.Mouse.right_click()
+            if key == 'L': TakeControl.Mouse.right_double_click()
 
-            # Draging
-            if key == 'o': pyautogui.mouseDown()
-            if key == 'p': pyautogui.mouseUp()
+            # Pressing mouse buttons
+            if key == 'u': TakeControl.Mouse.left_down()
+            if key == 'U': TakeControl.Mouse.left_up()
+            if key == 'o': TakeControl.Mouse.right_down()
+            if key == 'O': TakeControl.Mouse.right_up()
 
-            # Slow scrolling
-            if key == 'i': pyautogui.scroll(TakeControl.Config.SMALL_SCROLL_MOVEMENT)
-            if key == 'k': pyautogui.scroll(-TakeControl.Config.SMALL_SCROLL_MOVEMENT)
-
-            # Fast scrolling
-            if key == 'I': pyautogui.scroll(TakeControl.Config.BIG_SCROLL_MOVEMENT)
-            if key == 'K': pyautogui.scroll(-TakeControl.Config.BIG_SCROLL_MOVEMENT)
+            # Scrolling
+            if key == 'i': TakeControl.Mouse.slow_scroll_up()
+            if key == 'I': TakeControl.Mouse.fast_scroll_up()
+            if key == 'k': TakeControl.Mouse.slow_scroll_down()
+            if key == 'K': TakeControl.Mouse.fast_scroll_down()
 
             # Quiting
             if key == 'q': break
