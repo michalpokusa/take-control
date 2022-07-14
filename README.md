@@ -5,6 +5,7 @@ _TODO..._
 ## Bindings
 
 ### Cursor moving
+![Cursor moving image](/assets/cursor_moving.png "Cursor moving image")
 
 | Key | Action |
 | - | - |
@@ -14,6 +15,7 @@ _TODO..._
 | d / _D_ | Slow / _Fast_ cursor movement __right__ |
 
 ### Mouse clicks
+![Mouse clicks image](/assets/mouse_clicks.png "Mouse clicks image")
 
 | Key | Action |
 | - | - |
