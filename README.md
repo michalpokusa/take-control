@@ -5,6 +5,7 @@ _TODO..._
 ## Bindings
 
 ### Cursor moving
+![Cursor moving image](/assets/cursor_moving.png "Cursor moving image")
 
 | Key | Action |
 | - | - |
@@ -14,6 +15,7 @@ _TODO..._
 | d / _D_ | Slow / _Fast_ cursor movement __right__ |
 
 ### Mouse clicks
+![Mouse clicks image](/assets/mouse_clicks.png "Mouse clicks image")
 
 | Key | Action |
 | - | - |
@@ -59,3 +61,7 @@ _TODO..._
 | Key | Action |
 | - | - |
 | q | Quits the program |
+
+###### [Mouse pad icon](https://www.flaticon.com/free-icons/mouse-pad) created by Freepik - Flaticon
+###### [Cursor icon](https://www.flaticon.com/free-icons/cursor) created by Freepik - Flaticon
+###### [Click icon](https://www.flaticon.com/free-icons/click) created by Freepik - Flaticon
