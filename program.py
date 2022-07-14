@@ -85,6 +85,10 @@ class TakeControl:
             text_to_type = input("Text to type: ")
             pyautogui.write(text_to_type)
 
+        def hotkey():
+            hotkey_to_press = input("Hotkey to press: ")
+            pyautogui.hotkey(*hotkey_to_press.split(", "))
+
         def press():
             key_to_press = input("Key to press: ")
             pyautogui.press(key_to_press)
@@ -133,6 +137,9 @@ class TakeControl:
 
             # Typing
             if key == 't': TakeControl.Keyboard.type()
+
+            # Hotkey
+            if key == 'h': TakeControl.Keyboard.hotkey()
 
             # Pressing keyboard keys
             if key == 'P': TakeControl.Keyboard.press()
