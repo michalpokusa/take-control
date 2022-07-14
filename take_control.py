@@ -93,15 +93,15 @@ class TakeControl:
             hotkey_to_press = input("Hotkey to press: ")
             pyautogui.hotkey(*hotkey_to_press.split(", "))
 
-        def press():
+        def press_and_release():
             key_to_press = input("Key to press: ")
             pyautogui.press(key_to_press)
 
-        def press_down():
+        def press():
             key_to_press = input("Key to press down: ")
             pyautogui.keyDown(key_to_press)
 
-        def press_up():
+        def release():
             key_to_press = input("Key to press up: ")
             pyautogui.keyUp(key_to_press)
 
@@ -149,11 +149,11 @@ class TakeControl:
             if key == 'h': TakeControl.Keyboard.hotkey(); continue
 
             # Pressing keyboard keys
-            if key == 'p': TakeControl.Keyboard.press(); continue
+            if key == 'p': TakeControl.Keyboard.press_and_release(); continue
             if key == 'P':
                 second_sequence_key = readchar.readchar()
-                if second_sequence_key == 'd': TakeControl.Keyboard.press_down(); continue
-                if second_sequence_key == 'u': TakeControl.Keyboard.press_up(); continue
+                if second_sequence_key == 'd': TakeControl.Keyboard.press(); continue
+                if second_sequence_key == 'u': TakeControl.Keyboard.release(); continue
 
             # Quiting
             if key == 'q':
