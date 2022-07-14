@@ -142,8 +142,8 @@ class TakeControl:
             if key == 'h': TakeControl.Keyboard.hotkey(); continue
 
             # Pressing keyboard keys
-            if key == 'P': TakeControl.Keyboard.press(); continue
-            if key == 'p':
+            if key == 'p': TakeControl.Keyboard.press(); continue
+            if key == 'P':
                 second_sequence_key = readchar.readchar()
                 if second_sequence_key == 'd': TakeControl.Keyboard.press_down(); continue
                 if second_sequence_key == 'u': TakeControl.Keyboard.press_up(); continue
