@@ -1,6 +1,11 @@
 # Take Control
 
-_TODO..._
+Program that enables controlling mouse and keyboard over SSH on remote machines e.g. Raspberry Pi.
+
+Useful when there is no wireless keyboard/mouse around and using wired ones would be problematic.
+
+It is possible to control mouse, clicks, scroll, typing text, pressing buttons and hotkeys.
+
 
 ## Bindings
 
