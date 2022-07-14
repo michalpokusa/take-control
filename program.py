@@ -10,6 +10,9 @@ class TakeControl:
         SMALL_MOUSE_MOVEMENT = 10
         BIG_MOUSE_MOVEMENT = 100
 
+        SMALL_SCROLL_MOVEMENT = 5
+        BIG_SCROLL_MOVEMENT = 25
+
     def take_control():
         while True:
             key = readchar.readkey()
@@ -35,9 +38,13 @@ class TakeControl:
             if key == 'o': pyautogui.mouseDown()
             if key == 'p': pyautogui.mouseUp()
 
-            # Scrolling
-            if key == 'i': pyautogui.scroll(10)
-            if key == 'k': pyautogui.scroll(-10)
+            # Slow scrolling
+            if key == 'i': pyautogui.scroll(TakeControl.Config.SMALL_SCROLL_MOVEMENT)
+            if key == 'k': pyautogui.scroll(-TakeControl.Config.SMALL_SCROLL_MOVEMENT)
+
+            # Fast scrolling
+            if key == 'I': pyautogui.scroll(TakeControl.Config.BIG_SCROLL_MOVEMENT)
+            if key == 'K': pyautogui.scroll(-TakeControl.Config.BIG_SCROLL_MOVEMENT)
 
             # Quiting
             if key == 'q': break
