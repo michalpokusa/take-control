@@ -79,6 +79,12 @@ class TakeControl:
         def fast_scroll_down():
             pyautogui.scroll(-TakeControl.Config.BIG_SCROLL_MOVEMENT)
 
+    class Keyboard:
+
+        def type():
+            text_to_type = input("Text to type: ")
+            pyautogui.write(text_to_type)
+
     def take_control():
         while True:
             key = readchar.readkey()
@@ -112,6 +118,9 @@ class TakeControl:
             if key == 'I': TakeControl.Mouse.fast_scroll_up()
             if key == 'k': TakeControl.Mouse.slow_scroll_down()
             if key == 'K': TakeControl.Mouse.fast_scroll_down()
+
+            # Typing
+            if key == 't': TakeControl.Keyboard.type()
 
             # Quiting
             if key == 'q': break
