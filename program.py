@@ -106,47 +106,47 @@ class TakeControl:
             key = readchar.readkey()
 
             # Slow cursor moving
-            if key == 'w': TakeControl.Mouse.slow_move_up()
-            if key == 'a': TakeControl.Mouse.slow_move_left()
-            if key == 's': TakeControl.Mouse.slow_move_down()
-            if key == 'd': TakeControl.Mouse.slow_move_right()
+            if key == 'w': TakeControl.Mouse.slow_move_up(); continue
+            if key == 'a': TakeControl.Mouse.slow_move_left(); continue
+            if key == 's': TakeControl.Mouse.slow_move_down(); continue
+            if key == 'd': TakeControl.Mouse.slow_move_right(); continue
 
             # Fast cursor moving
-            if key == 'W': TakeControl.Mouse.fast_move_up()
-            if key == 'A': TakeControl.Mouse.fast_move_left()
-            if key == 'S': TakeControl.Mouse.fast_move_down()
-            if key == 'D': TakeControl.Mouse.fast_move_right()
+            if key == 'W': TakeControl.Mouse.fast_move_up(); continue
+            if key == 'A': TakeControl.Mouse.fast_move_left(); continue
+            if key == 'S': TakeControl.Mouse.fast_move_down(); continue
+            if key == 'D': TakeControl.Mouse.fast_move_right(); continue
 
             # Clicking mouse buttons
-            if key == 'j': TakeControl.Mouse.left_click()
-            if key == 'J': TakeControl.Mouse.left_double_click()
-            if key == 'l': TakeControl.Mouse.right_click()
-            if key == 'L': TakeControl.Mouse.right_double_click()
+            if key == 'j': TakeControl.Mouse.left_click(); continue
+            if key == 'J': TakeControl.Mouse.left_double_click(); continue
+            if key == 'l': TakeControl.Mouse.right_click(); continue
+            if key == 'L': TakeControl.Mouse.right_double_click(); continue
 
             # Pressing mouse buttons
-            if key == 'u': TakeControl.Mouse.left_down()
-            if key == 'U': TakeControl.Mouse.left_up()
-            if key == 'o': TakeControl.Mouse.right_down()
-            if key == 'O': TakeControl.Mouse.right_up()
+            if key == 'u': TakeControl.Mouse.left_down(); continue
+            if key == 'U': TakeControl.Mouse.left_up(); continue
+            if key == 'o': TakeControl.Mouse.right_down(); continue
+            if key == 'O': TakeControl.Mouse.right_up(); continue
 
             # Scrolling
-            if key == 'i': TakeControl.Mouse.slow_scroll_up()
-            if key == 'I': TakeControl.Mouse.fast_scroll_up()
-            if key == 'k': TakeControl.Mouse.slow_scroll_down()
-            if key == 'K': TakeControl.Mouse.fast_scroll_down()
+            if key == 'i': TakeControl.Mouse.slow_scroll_up(); continue
+            if key == 'I': TakeControl.Mouse.fast_scroll_up(); continue
+            if key == 'k': TakeControl.Mouse.slow_scroll_down(); continue
+            if key == 'K': TakeControl.Mouse.fast_scroll_down(); continue
 
             # Typing
-            if key == 't': TakeControl.Keyboard.type()
+            if key == 't': TakeControl.Keyboard.type(); continue
 
             # Hotkey
-            if key == 'h': TakeControl.Keyboard.hotkey()
+            if key == 'h': TakeControl.Keyboard.hotkey(); continue
 
             # Pressing keyboard keys
-            if key == 'P': TakeControl.Keyboard.press()
+            if key == 'P': TakeControl.Keyboard.press(); continue
             if key == 'p':
                 second_sequence_key = readchar.readchar()
-                if second_sequence_key == 'd': TakeControl.Keyboard.press_down()
-                if second_sequence_key == 'u': TakeControl.Keyboard.press_up()
+                if second_sequence_key == 'd': TakeControl.Keyboard.press_down(); continue
+                if second_sequence_key == 'u': TakeControl.Keyboard.press_up(); continue
 
             # Quiting
             if key == 'q': break
