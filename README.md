@@ -38,8 +38,8 @@ It is possible to control mouse, clicks, scroll, typing text, pressing buttons a
 
 | Key | Action |
 | - | - |
-| i / _I_ | Slow / _Fast_ cursor movement __up__ |
-| k / _K_ | Slow / _Fast_ cursor movement __down__ |
+| i / _I_ | Slow / _Fast_ scroll movement __up__ |
+| k / _K_ | Slow / _Fast_ scroll movement __down__ |
 
 ### Typing text
 
