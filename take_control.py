@@ -4,6 +4,8 @@ os.environ["DISPLAY"] = ":0"
 import readchar
 import pyautogui
 
+pyautogui.FAILSAFE = False
+
 class Utils:
     def clear_terminal():
         os.system('cls' if os.name == 'nt' else 'clear')
